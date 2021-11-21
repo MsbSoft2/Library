@@ -16,5 +16,21 @@ namespace Library.Domain.Context
         }
 
         public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<User>().HasData(
+                new User()
+                {
+                    Id = 1,
+                    FullName = "محمد صدرا برومند",
+                    Password = "sadra123",
+                    Role = "admin",
+                    RegisterDate = DateTime.Now
+                }
+                );
+        }
     }
 }

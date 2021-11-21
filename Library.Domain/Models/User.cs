@@ -15,5 +15,8 @@ namespace Library.Domain.Models
 
         [Display(Name = "تاریخ عضویت")]
         public DateTime RegisterDate { get; set; }
+
+        [Display(Name = "نقش"), Required(ErrorMessage = "لطفا {0} را وارد کنید"), MaxLength(50)]
+        public string Role { get; set; }
     }
 }

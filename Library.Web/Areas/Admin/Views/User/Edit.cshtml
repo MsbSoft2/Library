@@ -22,6 +22,18 @@
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" id="Role1" type="radio" asp-for="Role" value="admin">
+                <label class="form-check-label" for="Role1">
+                    ادمین
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" id="Role2" type="radio" asp-for="Role" value="user">
+                <label class="form-check-label" for="Role2">
+                    کاربر عادی
+                </label>
+            </div>
             <input type="hidden" asp-for="RegisterDate" />
             <div class="form-group">
                 <input type="submit" value="ویرایش کاربر" class="btn btn-warning px-5" />

@@ -55,7 +55,7 @@ namespace Library.Web.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FullName,Password")] User user)
+        public async Task<IActionResult> Create([Bind("Id,FullName,Password,Role")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace Library.Web.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,Password,RegisterDate")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,Password,RegisterDate,Role")] User user)
         {
             if (id != user.Id)
             {
