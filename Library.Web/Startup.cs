@@ -10,6 +10,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Library.Domain.Context;
 using Microsoft.EntityFrameworkCore;
+using Library.Core.Repositories;
+using Library.Core.Servicies;
 
 namespace Library.Web
 {
@@ -27,6 +29,12 @@ namespace Library.Web
         {
             services.AddControllersWithViews();
 
+            #region IoC
+
+            services.AddScoped<IUserRepository, UserRepository>();
+
+            #endregion
+            
             #region Context
 
             services.AddDbContext<LibraryContext>(options =>
@@ -35,6 +43,7 @@ namespace Library.Web
             });
 
             #endregion
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

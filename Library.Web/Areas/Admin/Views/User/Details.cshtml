@@ -1,4 +1,4 @@
-﻿@model Library.Domain.Models.User
+@model Library.Domain.Models.User
 
 @{
     ViewData["Title"] = "Details";
@@ -7,43 +7,36 @@
 <h1>Details</h1>
 
 <div>
+    <h4>User</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.FullName)
         </dt>
-        <dd class="col-sm-10">
+        <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.FullName)
         </dd>
-        <dt class="col-sm-2">
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Password)
         </dt>
-        <dd class="col-sm-10">
+        <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Password)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Role)
-        </dt>
-        <dd class="col-sm-10">
-            @if (Model.Role == "admin")
-            {
-                <span class="badge badge-warning rounded-pill p-2">ادمین</span>
-            }
-            else
-            {
-                <span class="badge badge-info rounded-pill p-2">کاربر عادی</span>
-            }
-        </dd>
-        <dt class="col-sm-2">
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.RegisterDate)
         </dt>
-        <dd class="col-sm-10">
+        <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.RegisterDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Role)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-warning btn px-5">ویرایش</a> |
-    <a asp-action="Index" class="btn btn-default">برگشت</a>
-
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

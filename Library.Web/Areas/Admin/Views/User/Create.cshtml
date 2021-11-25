@@ -1,11 +1,12 @@
-﻿@model Library.Domain.Models.User
+@model Library.Domain.Models.User
 
 @{
-    ViewData["Title"] = "Insert User";
+    ViewData["Title"] = "Create";
 }
 
-<h1>Insert User</h1>
+<h1>Create</h1>
 
+<h4>User</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -21,20 +22,18 @@
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" id="Role1" type="radio" asp-for="Role" value="admin">
-                <label class="form-check-label" for="Role1">
-                    ادمین
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" id="Role2" type="radio" asp-for="Role" value="user">
-                <label class="form-check-label" for="Role2">
-                    کاربر عادی
-                </label>
+            <div class="form-group">
+                <label asp-for="RegisterDate" class="control-label"></label>
+                <input asp-for="RegisterDate" class="form-control" />
+                <span asp-validation-for="RegisterDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Insert" class="btn btn-success px-5" />
+                <label asp-for="Role" class="control-label"></label>
+                <input asp-for="Role" class="form-control" />
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>

@@ -151,10 +151,15 @@ D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Error.cshtml.g.cs
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User1\Create.cshtml.g.cs
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User1\Delete.cshtml.g.cs
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User1\Details.cshtml.g.cs
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User1\Edit.cshtml.g.cs
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User1\Index.cshtml.g.cs
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\Create.cshtml.g.cs
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\Delete.cshtml.g.cs
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\Details.cshtml.g.cs
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\Edit.cshtml.g.cs
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
-D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
-D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs

@@ -15,7 +15,7 @@ namespace Library.Domain.Context
 
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
