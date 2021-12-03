@@ -1,0 +1,15 @@
+C:\Users\SADRA\Desktop\Library\Library.Core\bin\Debug\net5.0\Library.Core.deps.json
+C:\Users\SADRA\Desktop\Library\Library.Core\bin\Debug\net5.0\Library.Core.dll
+C:\Users\SADRA\Desktop\Library\Library.Core\bin\Debug\net5.0\ref\Library.Core.dll
+C:\Users\SADRA\Desktop\Library\Library.Core\bin\Debug\net5.0\Library.Core.pdb
+C:\Users\SADRA\Desktop\Library\Library.Core\bin\Debug\net5.0\Library.Domain.dll
+C:\Users\SADRA\Desktop\Library\Library.Core\bin\Debug\net5.0\Library.Domain.pdb
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.AssemblyReference.cache
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.AssemblyInfoInputs.cache
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.AssemblyInfo.cs
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.CoreCompileInputs.cache
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.CopyComplete
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.dll
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\ref\Library.Core.dll
+C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.pdb
