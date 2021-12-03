@@ -5,6 +5,7 @@
 - use Area
 - Razor View
 - EF Core (Code First)
+- use Design Patterns Repository
 
 ## موارد ساخته شده تا الان
 - ساخت ریپازیتوری در گیت هاب برای پروژه
