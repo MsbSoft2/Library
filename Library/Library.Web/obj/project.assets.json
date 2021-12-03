@@ -7195,11 +7195,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SADRA\\Desktop\\Library\\Library.Web\\Library.Web.csproj",
+      "projectUniqueName": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Library\\Library\\Library.Web\\Library.Web.csproj",
       "projectName": "Library.Web",
-      "projectPath": "C:\\Users\\SADRA\\Desktop\\Library\\Library.Web\\Library.Web.csproj",
+      "projectPath": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Library\\Library\\Library.Web\\Library.Web.csproj",
       "packagesPath": "C:\\Users\\SADRA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SADRA\\Desktop\\Library\\Library.Web\\obj\\",
+      "outputPath": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Library\\Library\\Library.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -7223,8 +7223,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\SADRA\\Desktop\\Library\\Library.Core\\Library.Core.csproj": {
-              "projectPath": "C:\\Users\\SADRA\\Desktop\\Library\\Library.Core\\Library.Core.csproj"
+            "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Library\\Library\\Library.Core\\Library.Core.csproj": {
+              "projectPath": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Library\\Library\\Library.Core\\Library.Core.csproj"
             }
           }
         }

@@ -13,3 +13,18 @@ C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj
 C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.dll
 C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\ref\Library.Core.dll
 C:\Users\SADRA\Desktop\Library\Library.Core\obj\Debug\net5.0\Library.Core.pdb
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.deps.json
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.dll
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\bin\Debug\net5.0\ref\Library.Core.dll
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.pdb
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\bin\Debug\net5.0\Library.Domain.dll
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\bin\Debug\net5.0\Library.Domain.pdb
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.AssemblyReference.cache
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.AssemblyInfoInputs.cache
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.AssemblyInfo.cs
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.CoreCompileInputs.cache
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.CopyComplete
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.dll
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\ref\Library.Core.dll
+D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.pdb
