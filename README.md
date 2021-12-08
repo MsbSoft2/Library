@@ -38,4 +38,4 @@
 - login ( html )
 - بخش اجاره ( افزودن - حذف - سرچ - no front - نمایش - معلوم باشه کدوم کاربر کتاب اجاره کرده
 - قالب اصلی نمایشی ( html آماده فونت
-- about - contact us - privacy (  html )
+- about - contact us - privacy (  html1 )
