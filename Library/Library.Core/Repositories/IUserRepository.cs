@@ -1,4 +1,5 @@
-﻿using Library.Domain.Models;
+﻿using Library.Core.DTOs;
+using Library.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace Library.Core.Repositories
         Task Update(User user);
         Task Remove(User user);
         Task<bool> UserExists(int id);
+        Task<User> Login(LoginViewModel login);
     }
 }

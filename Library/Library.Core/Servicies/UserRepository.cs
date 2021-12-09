@@ -1,4 +1,5 @@
-﻿using Library.Core.Repositories;
+﻿using Library.Core.DTOs;
+using Library.Core.Repositories;
 using Library.Domain.Context;
 using Library.Domain.Models;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +35,12 @@ namespace Library.Core.Servicies
         {
             return await _context.Users
                  .FirstOrDefaultAsync(m => m.Id == id);
+        }
+
+        public async Task<User> Login(LoginViewModel login)
+        {
+            return await _context.Users
+                .SingleOrDefaultAsync(u => u.FullName == login.FullName && u.Password == login.Password);
         }
 
         public async Task Remove(User user)

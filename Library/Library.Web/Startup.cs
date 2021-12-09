@@ -1,6 +1,7 @@
 using Library.Core.Repositories;
 using Library.Core.Servicies;
 using Library.Domain.Context;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Library.Web
@@ -39,7 +41,15 @@ namespace Library.Web
             #region IoC
             services.AddScoped<IUserRepository, UserRepository>();
             #endregion
-            #region Auth
+            #region Authentication
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option =>
+                {
+                    option.LoginPath = "/Login";
+                    option.LogoutPath = "/Logout";
+                    option.ExpireTimeSpan = TimeSpan.FromDays(1);
+                });
 
             #endregion
         }
@@ -63,6 +73,23 @@ namespace Library.Web
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
+
+            app.Use(async (context, next) =>
+            {
+                if (context.Request.Path.StartsWithSegments("/admin"))
+                {
+                    if (!context.User.Identity.IsAuthenticated)
+                    {
+                        context.Response.Redirect("/Login");
+                    }
+                    if (context.User.FindFirstValue(ClaimTypes.Role) != "admin")
+                    {
+                        context.Response.Redirect("/Login?error=role");
+                    }
+                }
+                await next.Invoke();
+            });
 
             app.UseEndpoints(endpoints =>
             {

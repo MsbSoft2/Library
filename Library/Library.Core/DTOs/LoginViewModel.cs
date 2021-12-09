@@ -15,7 +15,7 @@ namespace Library.Core.DTOs
         [Display(Name = "کلمه عبور"), Required(ErrorMessage = "لطفا {0} را وارد کنید"), MaxLength(150)]
         public string Password { get; set; }
 
-        [Compare("Password"), Display(Name = "کلمه عبور"), Required(ErrorMessage = "لطفا {0} را وارد کنید"), MaxLength(150)]
-        public string RePassword { get; set; }
+        [Display(Name = "مرا به خاطر بسپار")]
+        public bool RemmemberMe { get; set; }
     }
 }
