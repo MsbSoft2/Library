@@ -1,49 +1,129 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using Library.Web.ViewComponents
+<!DOCTYPE html>
+<html class="no-js" dir="rtl" lang="fa-IR">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Library.Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title> سایت کتابخانه </title>
+    <base href="">
+    <meta name="googlebot" content="index,follow">
+    <meta name="robots" content="noodp,noydir">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/contents/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/contents/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="~/contents/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/contents/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/contents/css/style.css">
+    <script src="~/contents/js/jquery.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Library.Web</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+    <script src="~/contents/js/modernizr.js"></script>
+
+    <!-- Top Menu -->
+    <div class="top-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-5">
+                    <ul>
+                        <li><a href=""><i class="fa fa-home"></i></a></li>
+                        <li><a href=""><i class="fa fa-question-circle"></i></a></li>
+                        <li><a href=""><i class="fa fa-envelope"></i></a></li>
                     </ul>
                 </div>
+                <div class="col-md-6 col-sm-6 col-xs-7">
+                    <span>امروز : 05/10/1400</span>
+                </div>
             </div>
-        </nav>
+        </div>
+    </div>
+    <!-- End Top Menu -->
+    <!-- header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <a href="" class="logo"><img src="~/225932.png" title=""></a>
+                    <div class="left-side">
+                        <h1><a href=""> سایت کتابخانه </a></h1>
+                        <h2>سیستم مدیریت کتابخانه</h2>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <form action="/Search" method="get" class="border-radius">
+                        <input class="border-radius" name="parameter" type="text" placeholder=" جستجو کنید ... ">
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <!-- End Header -->
+    <!-- menu -->
+    <nav class="main-menu">
+        <div class="container">
+            <span><i class="fa fa-th-list"></i></span>
+            <partial name="ShowGroupsInMenu" />
+        </div>
+    </nav>
+    <!-- End menu -->
+
+    <div class="container margin-top-30">
+        <div class="row">
+
+            <aside class="col-md-4 col-sm-12 col-xs-12 pull-right">
+
+                @*@await Component.InvokeAsync("ShowBookGroupsComponent")*@
+                @(await Component.InvokeAsync("BookCounts"))
+                <!-- most views news -->
+                @(await Component.InvokeAsync("TopBooks"))
+                <!-- end most views news -->
+            </aside>
+
+
+            <div class="col-md-8 col-sm-12 col-xs-12 ">
+
+                @RenderBody()
+
+            </div>
+
+
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer>
         <div class="container">
-            &copy; 1400 - Library.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <section class="access-links">
+                        <header> دسترسی سریع </header>
+                        <ul>
+                            <li><a href=""> صفحه اصلی </a></li>
+                            <li><a href=""> قوانین سایت  </a></li>
+                            <li><a href=""> تماس با ما  </a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="socials">
+                        <span> شبکه های اجتماعی  سایت</span>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-paper-plane"></i></a>
+                        <a href=""><i class="fa fa-google-plus"></i></a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p>
+                        تمامی حقوق مادی و معنوی این طرح متعلق به سیستم مدیریت کتابخانه می باشد و کپی برداری از این طرح غیر اخلاقی می باشد.
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    <script src="~/contents/js/bootstrap.min.js"></script>
+    <script src="~/contents/js/owl.carousel.js"></script>
+    <script src="~/contents/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Library.Domain.Models.Book>
+@using Library.Domain.Convertor
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>کتاب ها</h2>
+
+<p>
+    <a asp-action="Create">ایجاد یک کتاب جدید</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublishYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookVisit)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/contents/BookImages/@item.ImageName" class="img-thumbnail" style="max-width:120px" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookGroup.GroupTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortDescription)
+                </td>
+                <td>
+                    @item.PublishYear.ToShamsi()
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookVisit)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BookID" class="btn-warning">ویرایش صفحه</a> |
+                    <a asp-action="Details" asp-route-id="@item.BookID" class="btn-info">مشاهده جزئیات</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BookID" class="btn-danger">حذف صفحه</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

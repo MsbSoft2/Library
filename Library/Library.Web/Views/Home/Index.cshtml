@@ -1,9 +1,56 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using Library.Domain.Models
+@using Library.Domain.Convertor
+@model IEnumerable<Book>
+
+@{
+    ViewData["Title"] = "Index";
+    List<Book> Slider = ViewData["Slider"] as List<Book>;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
+<!-- slider -->
+@if (Slider.Any())
+{
+    <div class="news-slider border-radius">
+        <div id="slider-one" class="owl-carousel">
+            @{
+                foreach (var item in Slider)
+                {
+                    <div class="item">
+                        <img src="~/contents/BookImages/@item.ImageName">
+                        <div class="left-side">
+                            <h2> <a href="">@item.BookName</a> </h2>
+                            <p>
+                                @item.ShortDescription
+                            </p>
+                            <span> <i class="fa fa-calendar"></i> انتشار : @item.PublishYear.ToShamsi()</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                }
+            }
+        </div>
+        <a href="" class="news-archive"> <i class="icons icon-doc-1"></i> آرشیو کامل کتاب ها </a>
+    </div>
+}
+<!-- End slider -->
+<!-- last news -->
+<section class="last-news-section border-radius margin-top-60">
+    <header><i class="icons icon-doc-2"></i>  <h3>آخرین کتاب ها</h3> </header>
+    <ul>
+        @{
+            foreach (var item in Model)
+            {
+                <li>
+                    <img class="border-radius" src="~/contents/BookImages/@item.ImageName" />
+                    <h2> <a href="/Books/@item.BookID"> @item.BookName </a></h2>
+                    <p>
+                        @item.ShortDescription
+                    </p>
+                    <span class="date-publish"><i class="fa fa-calendar"></i> انتشار : @item.PublishYear.ToShamsi() </span>
+                    <a href="" class="more-link"><i class="icons icon-more"></i></a>
+                </li>
+            }
+        }
+    </ul>
+</section>
+<!-- End last news -->

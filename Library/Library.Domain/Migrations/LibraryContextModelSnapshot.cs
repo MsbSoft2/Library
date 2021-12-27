@@ -19,6 +19,76 @@ namespace Library.Domain.Migrations
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Library.Domain.Models.Book", b =>
+                {
+                    b.Property<int>("BookID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<int?>("BookGroupGroupID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BookName")
+                        .IsRequired()
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<int>("BookVisit")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GroupID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ISBNNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PublishYear")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PublisherName")
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<string>("ShortDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ShowInSlider")
+                        .HasColumnType("bit");
+
+                    b.HasKey("BookID");
+
+                    b.HasIndex("BookGroupGroupID");
+
+                    b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("Library.Domain.Models.BookGroup", b =>
+                {
+                    b.Property<int>("GroupID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("GroupTitle")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("GroupID");
+
+                    b.ToTable("BookGroups");
+                });
+
             modelBuilder.Entity("Library.Domain.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -54,9 +124,23 @@ namespace Library.Domain.Migrations
                             Id = 1,
                             FullName = "محمد صدرا برومند",
                             Password = "sadra123",
-                            RegisterDate = new DateTime(2021, 12, 3, 15, 9, 36, 365, DateTimeKind.Local).AddTicks(7951),
+                            RegisterDate = new DateTime(2021, 12, 24, 21, 6, 48, 818, DateTimeKind.Local).AddTicks(4230),
                             Role = "admin"
                         });
+                });
+
+            modelBuilder.Entity("Library.Domain.Models.Book", b =>
+                {
+                    b.HasOne("Library.Domain.Models.BookGroup", "BookGroup")
+                        .WithMany("Books")
+                        .HasForeignKey("BookGroupGroupID");
+
+                    b.Navigation("BookGroup");
+                });
+
+            modelBuilder.Entity("Library.Domain.Models.BookGroup", b =>
+                {
+                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }

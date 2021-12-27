@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Library.Domain.Models.Book>
+@using Library.Domain.Convertor
+@{
+    ViewData["Title"] = "آخرین کتاب ها" + ViewData["GroupTitle"].ToString();
+}
+
+<div class="col-md-8 col-sm-12 col-xs-12 pull-left">
+
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">خانه </a></li>
+        <li class="breadcrumb-item"><a href="#">کتاب </a></li>
+        <li class="breadcrumb-item active"> کتاب @ViewData["GroupTitle"].ToString() </li>
+    </ul>
+
+    <!-- last news -->
+    <section class="last-news-section border-radius">
+        <header><i class="icons icon-doc-2"></i>  <h3> آخرین کتاب ها @ViewData["GroupTitle"].ToString()</h3> </header>
+        <ul>
+            @{
+                foreach (var item in Model)
+                {
+                    <li>
+                        <img class="border-radius" src="~/contents/BookImages/@item.ImageName">
+                        <h2> <a href=""> @item.BookName </a></h2>
+                        <p>
+                            @item.ShortDescription
+                        </p>
+                        <span class="date-publish"><i class="fa fa-calendar"></i> انتشار : @item.PublishYear.ToShamsi() </span>
+                        <a href="" class="more-link"><i class="icons icon-more"></i></a>
+                    </li>
+                }
+            }
+        </ul>
+    </section>
+    <!-- End last news -->
+
+    <ul class="pagination">
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+</div>
+

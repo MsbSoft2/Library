@@ -1,0 +1,47 @@
+﻿@model Library.Domain.Models.Book
+@using Library.Domain.Convertor
+@{
+    ViewData["Title"] = Model.BookName;
+}
+
+<div class="col-md-8 col-sm-12 col-xs-12 pull-left">
+
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">خانه </a></li>
+        <li class="breadcrumb-item"><a href="#">کتاب </a></li>
+        <li class="breadcrumb-item"><a href="#">دسته بندی  </a></li>
+        <li class="breadcrumb-item active">عنوان کتاب در این ناحیه قرار میگیرد </li>
+    </ul>
+
+    <section class="single-news border-radius">
+        <header><h2> @Model.BookName </h2> <span> <i class="fa fa-calendar"></i>  انتشار : @Model.PublishYear.ToShamsi()</span></header>
+        <article>
+            <p>
+                @Model.ShortDescription
+            </p>
+            <div>
+                <img src="~/contents/BookImages/@Model.ImageName" alt="@Model.BookName" class="thumbnail" />
+            </div>
+            <p>
+                @Model.ShortDescription
+            </p>
+        </article>
+    </section>
+
+
+    @*Show Tags*@
+    @*<div class="keywords border-radius">
+        @{
+            foreach (var item in Model.tags.Split('-'))
+            {
+
+                <a href="/Search?parameter=@item">@item</a>
+
+            }
+        }
+    </div>*@
+
+
+
+</div>
+
