@@ -1,0 +1,80 @@
+﻿@model Library.Domain.Models.Book
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>حذف</h2>
+
+<h3>آیا از حذف این صفحه مطمئن هستید؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BookName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShortDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PublisherName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PublisherName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBNNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ISBNNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BookVisit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BookVisit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+        <dd>
+            <img src="~/contents/BookImages/@Model.ImageName" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowInSlider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShowInSlider)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishYear)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PublishYear)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BookGroup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BookGroup.GroupTitle)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BookID" />
+        <input type="submit" value="حذف" class="btn btn-default" /> |
+        <a asp-action="Index">بازگشت به لیست صفحات</a>
+    </form>
+</div>

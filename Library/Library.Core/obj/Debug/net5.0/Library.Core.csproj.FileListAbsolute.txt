@@ -43,3 +43,17 @@ E:\mehrsa\UNI\Term7\Software-Engineering-2\HomeWorks\Project\Library\Library\Lib
 E:\mehrsa\UNI\Term7\Software-Engineering-2\HomeWorks\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.dll
 E:\mehrsa\UNI\Term7\Software-Engineering-2\HomeWorks\Project\Library\Library\Library.Core\obj\Debug\net5.0\ref\Library.Core.dll
 E:\mehrsa\UNI\Term7\Software-Engineering-2\HomeWorks\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.pdb
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.deps.json
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\bin\Debug\net5.0\ref\Library.Core.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.pdb
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\bin\Debug\net5.0\Library.Domain.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\bin\Debug\net5.0\Library.Domain.pdb
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.AssemblyReference.cache
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.AssemblyInfoInputs.cache
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.AssemblyInfo.cs
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.CoreCompileInputs.cache
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\ref\Library.Core.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.pdb

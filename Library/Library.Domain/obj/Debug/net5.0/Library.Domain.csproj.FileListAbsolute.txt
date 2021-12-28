@@ -43,3 +43,17 @@ E:\mehrsa\UNI\Term7\Software-Engineering-2\HomeWorks\Project\Library\Library\Lib
 E:\mehrsa\UNI\Term7\Software-Engineering-2\HomeWorks\Project\Library\Library\Library.Domain\obj\Debug\net5.0\ref\Library.Domain.dll
 E:\mehrsa\UNI\Term7\Software-Engineering-2\HomeWorks\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.pdb
 E:\mehrsa\UNI\Term7\Software-Engineering-2\HomeWorks\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.genruntimeconfig.cache
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\bin\Debug\net5.0\Library.Domain.deps.json
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\bin\Debug\net5.0\Library.Domain.runtimeconfig.json
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\bin\Debug\net5.0\Library.Domain.runtimeconfig.dev.json
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\bin\Debug\net5.0\Library.Domain.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\bin\Debug\net5.0\ref\Library.Domain.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\bin\Debug\net5.0\Library.Domain.pdb
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.AssemblyInfoInputs.cache
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.AssemblyInfo.cs
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\ref\Library.Domain.dll
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.pdb
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.genruntimeconfig.cache

@@ -1,4 +1,5 @@
-﻿using Library.Domain.Context;
+﻿using Library.Core.Repositories;
+using Library.Domain.Context;
 using Library.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,16 +13,23 @@ namespace Library.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController()
+        private IBookRepository _bookRepository;
+        public HomeController(IBookRepository bookRepository)
         {
+            _bookRepository = bookRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
+            ViewData["Slider"] = _bookRepository.GetSlider();
+            return View(_bookRepository.GetLastBooks());
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult ContactUs()
         {
             return View();
         }

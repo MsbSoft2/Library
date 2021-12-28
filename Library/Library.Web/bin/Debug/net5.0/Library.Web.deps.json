@@ -34,6 +34,7 @@
       "Library.Web/1.0.0": {
         "dependencies": {
           "Library.Core": "1.0.0",
+          "Library.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.7",
           "Microsoft.EntityFrameworkCore.Design": "5.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
