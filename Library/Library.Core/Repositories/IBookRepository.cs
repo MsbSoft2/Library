@@ -20,7 +20,7 @@ namespace Library.Core.Repositories
         void UpdateBook(Book book);
         void DeleteBook(Book book);
         void DeleteBookById(int bookId);
-        bool BookExsist(int pageId);
+        bool BookExsist(int bookId);
         void Save();
     }
 }

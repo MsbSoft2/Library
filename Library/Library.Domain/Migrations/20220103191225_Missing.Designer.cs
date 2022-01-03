@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Library.Domain.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    [Migration("20211224173649_Book3")]
-    partial class Book3
+    [Migration("20220103191225_Missing")]
+    partial class Missing
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,12 +53,21 @@ namespace Library.Domain.Migrations
                     b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("PublishYear")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PublisherName")
                         .HasMaxLength(400)
                         .HasColumnType("nvarchar(400)");
+
+                    b.Property<int?>("RentID")
+                        .HasColumnType("int");
+
+                    b.Property<bool?>("RentOrNot")
+                        .HasColumnType("bit");
 
                     b.Property<string>("ShortDescription")
                         .IsRequired()
@@ -70,6 +79,8 @@ namespace Library.Domain.Migrations
                     b.HasKey("BookID");
 
                     b.HasIndex("BookGroupGroupID");
+
+                    b.HasIndex("RentID");
 
                     b.ToTable("Books");
                 });
@@ -89,6 +100,18 @@ namespace Library.Domain.Migrations
                     b.HasKey("GroupID");
 
                     b.ToTable("BookGroups");
+                });
+
+            modelBuilder.Entity("Library.Domain.Models.Rent", b =>
+                {
+                    b.Property<int>("RentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("RentID");
+
+                    b.ToTable("Rents");
                 });
 
             modelBuilder.Entity("Library.Domain.Models.User", b =>
@@ -126,7 +149,7 @@ namespace Library.Domain.Migrations
                             Id = 1,
                             FullName = "محمد صدرا برومند",
                             Password = "sadra123",
-                            RegisterDate = new DateTime(2021, 12, 24, 21, 6, 48, 818, DateTimeKind.Local).AddTicks(4230),
+                            RegisterDate = new DateTime(2022, 1, 3, 22, 42, 25, 444, DateTimeKind.Local).AddTicks(9193),
                             Role = "admin"
                         });
                 });
@@ -137,10 +160,19 @@ namespace Library.Domain.Migrations
                         .WithMany("Books")
                         .HasForeignKey("BookGroupGroupID");
 
+                    b.HasOne("Library.Domain.Models.Rent", null)
+                        .WithMany("Books")
+                        .HasForeignKey("RentID");
+
                     b.Navigation("BookGroup");
                 });
 
             modelBuilder.Entity("Library.Domain.Models.BookGroup", b =>
+                {
+                    b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("Library.Domain.Models.Rent", b =>
                 {
                     b.Navigation("Books");
                 });

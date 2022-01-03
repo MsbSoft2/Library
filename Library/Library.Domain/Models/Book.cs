@@ -45,6 +45,10 @@ namespace Library.Domain.Models
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public int ISBNNumber { get; set; }
 
+        [Display(Name = "قیمت اجاره")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        public int Price { get; set; }
+
         [Display(Name = "تصویر")]
         public string ImageName { get; set; }
 
@@ -56,5 +60,8 @@ namespace Library.Domain.Models
 
         [Display(Name = "گروه")]
         public virtual BookGroup BookGroup { get; set; }
+
+        public virtual List<Rent> Rents { get; set; }
+
     }
 }

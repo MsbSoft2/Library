@@ -62,10 +62,25 @@
         <nav class="head-nav">
             <ul class="menu sfont">
                 <li>
-                    <a asp-controller="User1" asp-action="Index">
+                    <a asp-controller="User" asp-action="Index">
                         <svg class="person">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#person"></use>
                         </svg><span class="sfont">لیست کاربران</span>
+                    </a>
+                    <a asp-controller="BookGroups" asp-action="Index">
+                        <svg class="glyphicon-book">
+                            <use xlink:href=""></use>
+                        </svg><span class="sfont">لیست گروه کتاب ها</span>
+                    </a>
+                    <a asp-controller="Books" asp-action="Index">
+                        <svg class="glyphicon-book">
+                            <use xlink:href="#"></use>
+                        </svg><span class="sfont">لیست کتاب ها</span>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <svg class="glyphicon-book">
+                            <use xlink:href="#"></use>
+                        </svg><span class="sfont">صفحه اصلی</span>
                     </a>
                 </li>
             </ul>

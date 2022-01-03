@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Library.Domain.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    [Migration("20211224162710_Book2")]
-    partial class Book2
+    [Migration("20220103191953_Rent")]
+    partial class Rent
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,21 @@ namespace Library.Domain.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("BookRent", b =>
+                {
+                    b.Property<int>("BooksBookID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RentsRentID")
+                        .HasColumnType("int");
+
+                    b.HasKey("BooksBookID", "RentsRentID");
+
+                    b.HasIndex("RentsRentID");
+
+                    b.ToTable("BookRent");
+                });
 
             modelBuilder.Entity("Library.Domain.Models.Book", b =>
                 {
@@ -30,16 +45,16 @@ namespace Library.Domain.Migrations
 
                     b.Property<string>("Author")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
 
                     b.Property<int?>("BookGroupGroupID")
                         .HasColumnType("int");
 
                     b.Property<string>("BookName")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
 
                     b.Property<int>("BookVisit")
                         .HasColumnType("int");
@@ -48,24 +63,24 @@ namespace Library.Domain.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("ISBNNumber")
-                        .HasMaxLength(150)
                         .HasColumnType("int");
 
                     b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("PublishYear")
-                        .HasMaxLength(150)
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PublisherName")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
 
                     b.Property<string>("ShortDescription")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("ShowInSlider")
                         .HasColumnType("bit");
@@ -92,6 +107,18 @@ namespace Library.Domain.Migrations
                     b.HasKey("GroupID");
 
                     b.ToTable("BookGroups");
+                });
+
+            modelBuilder.Entity("Library.Domain.Models.Rent", b =>
+                {
+                    b.Property<int>("RentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("RentID");
+
+                    b.ToTable("Rents");
                 });
 
             modelBuilder.Entity("Library.Domain.Models.User", b =>
@@ -129,9 +156,24 @@ namespace Library.Domain.Migrations
                             Id = 1,
                             FullName = "محمد صدرا برومند",
                             Password = "sadra123",
-                            RegisterDate = new DateTime(2021, 12, 24, 19, 57, 10, 307, DateTimeKind.Local).AddTicks(2380),
+                            RegisterDate = new DateTime(2022, 1, 3, 22, 49, 53, 294, DateTimeKind.Local).AddTicks(7838),
                             Role = "admin"
                         });
+                });
+
+            modelBuilder.Entity("BookRent", b =>
+                {
+                    b.HasOne("Library.Domain.Models.Book", null)
+                        .WithMany()
+                        .HasForeignKey("BooksBookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Library.Domain.Models.Rent", null)
+                        .WithMany()
+                        .HasForeignKey("RentsRentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Library.Domain.Models.Book", b =>

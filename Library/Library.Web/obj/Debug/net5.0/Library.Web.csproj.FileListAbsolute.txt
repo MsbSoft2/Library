@@ -176,3 +176,4 @@ C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Web\obj\Debug\net5.0\Raz
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Web\obj\Debug\net5.0\Razor\Views\Shared\ShowGroupsInMenu.cshtml.g.cs
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Web\obj\Debug\net5.0\Razor\Views\Shared\Components\BookCounts\Default.cshtml.g.cs
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Web\obj\Debug\net5.0\Razor\Views\Home\ContactUs.cshtml.g.cs
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Web\obj\Debug\net5.0\Razor\Views\Rents\Index.cshtml.g.cs

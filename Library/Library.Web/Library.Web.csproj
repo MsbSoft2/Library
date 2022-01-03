@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\contents\BookImages\" />
     <Folder Include="wwwroot\contents\img\" />
   </ItemGroup>
 

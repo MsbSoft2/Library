@@ -57,3 +57,4 @@ C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\ref\Library.Domain.dll
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.pdb
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.genruntimeconfig.cache
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Domain\obj\Debug\net5.0\Library.Domain.csproj.AssemblyReference.cache
