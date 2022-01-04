@@ -9,18 +9,20 @@
 <h3>آیا مطمئن به حذف گروه '@Model.GroupTitle' هستید؟</h3>
 <div>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
+    <dl class="row">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.GroupTitle)
         </dt>
-        <dd>
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.GroupTitle)
         </dd>
     </dl>
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="GroupID" />
-        <input type="submit" value="حذف" class="btn btn-danger" /> |
-        <a asp-action="Index">بازگشت به لیست</a>
+        <input type="submit" value="حذف" class="btn btn-sm btn-danger" />
+        <div>
+            <a asp-action="Index">بازگشت به لیست گروه کتاب ها</a>
+        </div>
     </form>
 </div>

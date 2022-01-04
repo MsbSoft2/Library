@@ -77,9 +77,9 @@ namespace Library.Core.Servicies
         {
             return _db.Books.OrderBy(p => p.BookVisit).Take(take).ToList();
         }
-        public bool BookExsist(int pageId)
+        public bool BookExsist(int bookId)
         {
-            return _db.Books.Any(p => p.BookID == pageId);
+            return _db.Books.Any(p => p.BookID == bookId);
         }
     }
 }

@@ -57,3 +57,4 @@ C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Li
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.dll
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\ref\Library.Core.dll
 C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.pdb
+C:\Users\Mehrsa\Desktop\Project\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.CopyComplete

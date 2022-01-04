@@ -1,5 +1,6 @@
 ﻿using Library.Core.Repositories;
 using Library.Domain.Context;
+using Library.Domain.Convertor;
 using Library.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -22,6 +23,8 @@ namespace Library.Web.Controllers
         public IActionResult Index()
         {
             ViewData["Slider"] = _bookRepository.GetSlider();
+            var dateTime = DateTime.Now;
+            ViewData["Time"] = dateTime.ToShamsi();
             return View(_bookRepository.GetLastBooks());
         }
 

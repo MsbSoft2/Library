@@ -1,45 +1,59 @@
 ﻿@model Library.Domain.Models.Book
 @using Library.Domain.Convertor
 @{
-    ViewData["Title"] = Model.BookName;
+    ViewData["Title"] = Model.BookName + ViewData["GroupName"].ToString();
 }
 
-<div class="col-md-8 col-sm-12 col-xs-12 pull-left">
-
+<div class="col-md-12 col-sm-12 col-xs-12 pull-left">
     <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">خانه </a></li>
         <li class="breadcrumb-item"><a href="#">کتاب </a></li>
-        <li class="breadcrumb-item"><a href="#">دسته بندی  </a></li>
-        <li class="breadcrumb-item active">عنوان کتاب در این ناحیه قرار میگیرد </li>
+        <li class="breadcrumb-item"><a href="#">@ViewData["GroupName"].ToString()</a></li>
+        <li class="breadcrumb-item active">@Model.BookName </li>
     </ul>
 
-    <section class="single-news border-radius">
+    <section class="single-news border-radius col-md-12 col-sm-12 col-xs-12">
         <header><h2> @Model.BookName </h2> <span> <i class="fa fa-calendar"></i>  انتشار : @Model.PublishYear.ToShamsi()</span></header>
-        <article>
-            <p>
-                @Model.ShortDescription
-            </p>
-            <div>
-                <img src="~/contents/BookImages/@Model.ImageName" alt="@Model.BookName" class="thumbnail" />
-            </div>
-            <p>
-                @Model.ShortDescription
-            </p>
+        <article class="col-md-12 col-sm-12 col-xs-12">
+            <ul>
+                <li>
+                    <img class="border-radius col-md-4 col-sm-4 col-xs-4 pull-left" src="~/contents/BookImages/@Model.ImageName" alt="@Model.BookName" />
+                    <br />
+                    <p>
+                        توضیح مختصر: @Model.ShortDescription
+                    </p>
+                    <p>
+                        نویسنده: @Model.Author
+                    </p>
+                    <p>
+                        انتشارات: @Model.PublisherName
+                    </p>
+                    <p>
+                        قیمت اجاره(ریال): @Model.Price
+                    </p>
+                    <p>
+                        دسته بندی: @ViewData["GroupName"].ToString()
+                    </p>
+                </li>
+                <li>
+                    <button class="btn btn-info" asp-controller="Rents" asp-action="Index">افزودن</button>
+                </li>
+            </ul>
         </article>
     </section>
 
 
     @*Show Tags*@
     @*<div class="keywords border-radius">
-        @{
-            foreach (var item in Model.tags.Split('-'))
-            {
+            @{
+                foreach (var item in Model.tags.Split('-'))
+                {
 
-                <a href="/Search?parameter=@item">@item</a>
+                    <a href="/Search?parameter=@item">@item</a>
 
+                }
             }
-        }
-    </div>*@
+        </div>*@
 
 
 

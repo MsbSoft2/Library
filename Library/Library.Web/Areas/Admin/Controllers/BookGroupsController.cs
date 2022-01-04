@@ -14,9 +14,9 @@ namespace Library.Web.Areas.Admin.Controllers
     public class BookGroupsController : Controller
     {
         private IBookGroupRepository _bookGroupRepository;
-        public BookGroupsController(IBookGroupRepository BookGroupRepository)
+        public BookGroupsController(IBookGroupRepository bookGroupRepository)
         {
-            _bookGroupRepository = BookGroupRepository;
+            _bookGroupRepository = bookGroupRepository;
         }
 
         // GET: Admin/BookGroups

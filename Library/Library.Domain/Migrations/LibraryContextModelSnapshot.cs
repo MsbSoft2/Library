@@ -51,6 +51,9 @@ namespace Library.Domain.Migrations
                     b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("PublishYear")
                         .HasColumnType("datetime2");
 
@@ -89,6 +92,23 @@ namespace Library.Domain.Migrations
                     b.ToTable("BookGroups");
                 });
 
+            modelBuilder.Entity("Library.Domain.Models.Rent", b =>
+                {
+                    b.Property<int>("RentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
+
+                    b.HasKey("RentID");
+
+                    b.HasIndex("BookID");
+
+                    b.ToTable("Rents");
+                });
+
             modelBuilder.Entity("Library.Domain.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -124,7 +144,7 @@ namespace Library.Domain.Migrations
                             Id = 1,
                             FullName = "محمد صدرا برومند",
                             Password = "sadra123",
-                            RegisterDate = new DateTime(2021, 12, 24, 21, 6, 48, 818, DateTimeKind.Local).AddTicks(4230),
+                            RegisterDate = new DateTime(2022, 1, 3, 23, 23, 6, 285, DateTimeKind.Local).AddTicks(6302),
                             Role = "admin"
                         });
                 });
@@ -136,6 +156,22 @@ namespace Library.Domain.Migrations
                         .HasForeignKey("BookGroupGroupID");
 
                     b.Navigation("BookGroup");
+                });
+
+            modelBuilder.Entity("Library.Domain.Models.Rent", b =>
+                {
+                    b.HasOne("Library.Domain.Models.Book", "Book")
+                        .WithMany("Rents")
+                        .HasForeignKey("BookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("Library.Domain.Models.Book", b =>
+                {
+                    b.Navigation("Rents");
                 });
 
             modelBuilder.Entity("Library.Domain.Models.BookGroup", b =>

@@ -1,4 +1,5 @@
 ﻿@using Library.Web.ViewComponents
+@using Library.Domain.Convertor
 <!DOCTYPE html>
 <html class="no-js" dir="rtl" lang="fa-IR">
 <head>
@@ -26,13 +27,15 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-5">
                     <ul>
-                        <li><a href=""><i class="fa fa-home"></i></a></li>
-                        <li><a href=""><i class="fa fa-question-circle"></i></a></li>
-                        <li><a href=""><i class="fa fa-envelope"></i></a></li>
+                        <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i></a></li>
+                        <li><a asp-controller="Home" asp-action="Privacy"><i class="fa fa-question-circle"></i></a></li>
+                        <li><a asp-controller="Home" asp-action="ContactUs"><i class="fa fa-envelope"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-7">
-                    <span>امروز : 05/10/1400</span>
+                    <span>
+                      امروز: @DateTime.Now.ToShamsi();
+                    </span>
                 </div>
             </div>
         </div>
@@ -43,10 +46,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <a href="" class="logo"><img src="~/225932.png" title=""></a>
+                    <a asp-controller="Home" asp-action="Index" class="logo"><img src="~/225932.png" title=""></a>
                     <div class="left-side">
-                        <h1><a href=""> سایت کتابخانه </a></h1>
-                        <h2>سیستم مدیریت کتابخانه</h2>
+                        <h1><a asp-controller="Home" asp-action="Index"> سایت کتابخانه </a></h1>
+                        <h2><a asp-controller="Home" asp-action="Index">سیستم مدیریت کتابخانه</a></h2>
                     </div>
                     <div class="clearfix"></div>
                 </div>
