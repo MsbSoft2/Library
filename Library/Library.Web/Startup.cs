@@ -57,6 +57,7 @@ namespace Library.Web
             #endregion
             services.AddTransient<IBookRepository, BookRepository>();
             services.AddTransient<IBookGroupRepository, BookGroupRepository>();
+            services.AddTransient<IRentRepository, RentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

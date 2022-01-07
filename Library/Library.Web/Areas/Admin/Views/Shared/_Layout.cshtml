@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/custom.css">
 </head>
-<body>
+<body class="text-right">
 
     <header dir="rtl">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -62,17 +62,45 @@
         <nav class="head-nav">
             <ul class="menu sfont">
                 <li>
-                    <a asp-controller="User1" asp-action="Index">
+                    <a asp-controller="User" asp-action="Index">
                         <svg class="person">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#person"></use>
                         </svg><span class="sfont">لیست کاربران</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="BookGroups" asp-action="Index">
+                        <svg class="person">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pinterest"></use>
+                        </svg><span class="sfont">لیست گروه کتاب ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Books" asp-action="Index">
+                        <svg class="person">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#paper-airplane"></use>
+                        </svg><span class="sfont">لیست کتاب ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-controller="Rent" asp-action="Index">
+                        <svg class="person">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googleplus"></use>
+                        </svg><span class="sfont">لیست اجاره ها</span>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <svg class="person">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use>
+                        </svg><span class="sfont">صفحه اصلی</span>
                     </a>
                 </li>
             </ul>
         </nav>
     </header> <!-- //main-head -->
 
-    <div class="wrap-all-the-things">
+    <div class="container">
         @RenderBody()
     </div>
 

@@ -19,6 +19,21 @@ namespace Library.Domain.Migrations
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("BookRent", b =>
+                {
+                    b.Property<int>("BooksBookID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RentsRentID")
+                        .HasColumnType("int");
+
+                    b.HasKey("BooksBookID", "RentsRentID");
+
+                    b.HasIndex("RentsRentID");
+
+                    b.ToTable("BookRent");
+                });
+
             modelBuilder.Entity("Library.Domain.Models.Book", b =>
                 {
                     b.Property<int>("BookID")
@@ -50,6 +65,9 @@ namespace Library.Domain.Migrations
 
                     b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("PublishYear")
                         .HasColumnType("datetime2");
@@ -89,6 +107,30 @@ namespace Library.Domain.Migrations
                     b.ToTable("BookGroups");
                 });
 
+            modelBuilder.Entity("Library.Domain.Models.Rent", b =>
+                {
+                    b.Property<int>("RentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CountDay")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("GetDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("RentID");
+
+                    b.ToTable("Rents");
+                });
+
             modelBuilder.Entity("Library.Domain.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -122,11 +164,41 @@ namespace Library.Domain.Migrations
                         new
                         {
                             Id = 1,
-                            FullName = "محمد صدرا برومند",
+                            FullName = "sadra",
                             Password = "sadra123",
-                            RegisterDate = new DateTime(2021, 12, 24, 21, 6, 48, 818, DateTimeKind.Local).AddTicks(4230),
+                            RegisterDate = new DateTime(2022, 1, 4, 16, 4, 13, 609, DateTimeKind.Local).AddTicks(5442),
                             Role = "admin"
                         });
+                });
+
+            modelBuilder.Entity("RentUser", b =>
+                {
+                    b.Property<int>("RentsRentID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsersId")
+                        .HasColumnType("int");
+
+                    b.HasKey("RentsRentID", "UsersId");
+
+                    b.HasIndex("UsersId");
+
+                    b.ToTable("RentUser");
+                });
+
+            modelBuilder.Entity("BookRent", b =>
+                {
+                    b.HasOne("Library.Domain.Models.Book", null)
+                        .WithMany()
+                        .HasForeignKey("BooksBookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Library.Domain.Models.Rent", null)
+                        .WithMany()
+                        .HasForeignKey("RentsRentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Library.Domain.Models.Book", b =>
@@ -136,6 +208,21 @@ namespace Library.Domain.Migrations
                         .HasForeignKey("BookGroupGroupID");
 
                     b.Navigation("BookGroup");
+                });
+
+            modelBuilder.Entity("RentUser", b =>
+                {
+                    b.HasOne("Library.Domain.Models.Rent", null)
+                        .WithMany()
+                        .HasForeignKey("RentsRentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Library.Domain.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Library.Domain.Models.BookGroup", b =>

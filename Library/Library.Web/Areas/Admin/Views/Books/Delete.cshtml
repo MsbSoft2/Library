@@ -1,4 +1,5 @@
 ﻿@model Library.Domain.Models.Book
+@using Library.Domain.Convertor
 
 @{
     ViewData["Title"] = "Delete";
@@ -7,74 +8,47 @@
 <h2>حذف</h2>
 
 <h3>آیا از حذف این صفحه مطمئن هستید؟</h3>
-<div>
+<div class="col-md-12 col-sm-12 col-xs-12 pull-left">
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BookName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.BookName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ShortDescription)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ShortDescription)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Author)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Author)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PublisherName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PublisherName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ISBNNumber)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ISBNNumber)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.BookVisit)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.BookVisit)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ImageName)
-        </dt>
-        <dd>
-            <img src="~/contents/BookImages/@Model.ImageName" />
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ShowInSlider)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ShowInSlider)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishYear)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PublishYear)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.BookGroup)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.BookGroup.GroupTitle)
-        </dd>
-    </dl>
+    <ul>
+        <p>
+            <img class="border-radius col-md-2 col-sm-2 col-xs-2" src="~/contents/BookImages/@Model.ImageName" alt="@Model.BookName" />
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.BookName) : @Html.DisplayFor(model => model.BookName)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.ShortDescription) : @Html.DisplayFor(model => model.ShortDescription)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.Author) : @Html.DisplayFor(model => model.Author)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.PublisherName) : @Html.DisplayFor(model => model.PublisherName)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.ISBNNumber) : @Html.DisplayFor(model => model.ISBNNumber)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.Price) : @Html.DisplayFor(model => model.Price)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.BookVisit) : @Html.DisplayFor(model => model.BookVisit)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.ShowInSlider) : @Html.DisplayFor(model => model.ShowInSlider)
+        </p>
+        <p>
+            @Html.DisplayNameFor(model => model.PublishYear) : @Model.PublishYear.ToShamsi()
+        </p>
+    </ul>
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="BookID" />
-        <input type="submit" value="حذف" class="btn btn-default" /> |
-        <a asp-action="Index">بازگشت به لیست صفحات</a>
+        <input type="submit" value="حذف" class="btn btn-sm btn-warning" />
+        <div>
+            <a asp-action="Index">بازگشت به لیست کتاب ها</a>
+        </div>
+
     </form>
 </div>

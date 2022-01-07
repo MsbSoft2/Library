@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Library.Core.DTOs.RentViewModel>
+
+@{
+    ViewData["Title"] = "لیست اجاره ها";
+    int count = 1;
+}
+
+<h2>لیست اجاره ها</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                نام کاربر
+            </th>
+            <th>
+                نام کتاب
+            </th>
+            <th>
+                تعداد روز اجاره
+            </th>
+            <th>
+                قیمت اجاره
+            </th>
+            <th>
+                تاریخ اجاره گرفتن
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(count++)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CountDay)
+                </td>
+                <td>
+                    @item.Price
+                </td>
+                <td>
+                    @item.RentDate.ToShamsi()
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-warning px-3"
+                       asp-controller="Rent"
+                       asp-action="BackBook"
+                       asp-route-bookId="@item.RentID">برگشت کتاب</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -7138,41 +7138,46 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mehrsa\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\SADRA\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mehrsa\\Desktop\\Project\\Library\\Library\\Library.Web\\Library.Web.csproj",
+      "projectUniqueName": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Lib\\Library\\Library\\Library.Web\\Library.Web.csproj",
       "projectName": "Library.Web",
-      "projectPath": "C:\\Users\\Mehrsa\\Desktop\\Project\\Library\\Library\\Library.Web\\Library.Web.csproj",
-      "packagesPath": "C:\\Users\\Mehrsa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mehrsa\\Desktop\\Project\\Library\\Library\\Library.Web\\obj\\",
+      "projectPath": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Lib\\Library\\Library\\Library.Web\\Library.Web.csproj",
+      "packagesPath": "C:\\Users\\SADRA\\.nuget\\packages\\",
+      "outputPath": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Lib\\Library\\Library\\Library.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mehrsa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\SADRA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\Visual Studio\\Nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Mehrsa\\Desktop\\Project\\Library\\Library\\Library.Core\\Library.Core.csproj": {
-              "projectPath": "C:\\Users\\Mehrsa\\Desktop\\Project\\Library\\Library\\Library.Core\\Library.Core.csproj"
+            "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Lib\\Library\\Library\\Library.Core\\Library.Core.csproj": {
+              "projectPath": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Lib\\Library\\Library\\Library.Core\\Library.Core.csproj"
             },
-            "C:\\Users\\Mehrsa\\Desktop\\Project\\Library\\Library\\Library.Domain\\Library.Domain.csproj": {
-              "projectPath": "C:\\Users\\Mehrsa\\Desktop\\Project\\Library\\Library\\Library.Domain\\Library.Domain.csproj"
+            "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Lib\\Library\\Library\\Library.Domain\\Library.Domain.csproj": {
+              "projectPath": "D:\\Larn\\University Eduction\\001\\مهندسی نرم افزار 2\\Lib\\Library\\Library\\Library.Domain\\Library.Domain.csproj"
             }
           }
         }
@@ -7230,7 +7235,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

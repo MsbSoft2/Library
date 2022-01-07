@@ -62,7 +62,7 @@ namespace Library.Web.Areas.Admin.Controllers
         [DisableRequestSizeLimit,
     RequestFormLimits(MultipartBodyLengthLimit = int.MaxValue,
         ValueLengthLimit = int.MaxValue)]
-        public async Task<IActionResult> Create([Bind("BookID,GroupID,BookName,ShortDescription,Author,PublisherName,PublishYear,ISBNNumber,ImageName,ShowInSlider,BookVisit")] Book book, IFormFile imgup)
+        public async Task<IActionResult> Create([Bind("BookID,GroupID,BookName,ShortDescription,Author,PublisherName,PublishYear,ISBNNumber,Price,ImageName,ShowInSlider,BookVisit")] Book book, IFormFile imgup)
         {
             if (ModelState.IsValid)
             {
@@ -123,7 +123,7 @@ namespace Library.Web.Areas.Admin.Controllers
         //RequestFormLimits(MultipartBodyLengthLimit = int.MaxValue,
         //    ValueLengthLimit = int.MaxValue)]
         [RequestSizeLimit(40000000)]
-        public async Task<IActionResult> Edit(int id, [Bind("BookID,GroupID,BookName,ShortDescription,Author,PublisherName,PublishYear,ISBNNumber,ImageName,ShowInSlider,BookVisit")] Book book, IFormFile imgup)
+        public async Task<IActionResult> Edit(int id, [Bind("BookID,GroupID,BookName,ShortDescription,Author,PublisherName,PublishYear,ISBNNumber,Price,ImageName,ShowInSlider,BookVisit")] Book book, IFormFile imgup)
         {
             if (id != book.BookID)
             {
@@ -197,7 +197,7 @@ namespace Library.Web.Areas.Admin.Controllers
 
             if (book.ImageName != null)
             {
-                var ImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot","contents" , "BookImages", book.ImageName);
+                var ImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "contents", "BookImages", book.ImageName);
                 if (System.IO.File.Exists(ImagePath))
                 {
                     System.IO.File.Delete(ImagePath);

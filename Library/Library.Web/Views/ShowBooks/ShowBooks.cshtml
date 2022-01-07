@@ -1,45 +1,80 @@
 ﻿@model Library.Domain.Models.Book
 @using Library.Domain.Convertor
-@{
-    ViewData["Title"] = Model.BookName;
-}
+@using System.Security.Claims;
+@{ ViewData["Title"] = Model.BookName + ViewData["GroupName"].ToString(); }
 
-<div class="col-md-8 col-sm-12 col-xs-12 pull-left">
-
+<div class="col-md-12 col-sm-12 col-xs-12 pull-left">
     <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">خانه </a></li>
         <li class="breadcrumb-item"><a href="#">کتاب </a></li>
-        <li class="breadcrumb-item"><a href="#">دسته بندی  </a></li>
-        <li class="breadcrumb-item active">عنوان کتاب در این ناحیه قرار میگیرد </li>
+        <li class="breadcrumb-item"><a href="#">@ViewData["GroupName"].ToString()</a></li>
+        <li class="breadcrumb-item active">@Model.BookName </li>
     </ul>
 
-    <section class="single-news border-radius">
+    <section class="single-news border-radius col-md-12 col-sm-12 col-xs-12">
         <header><h2> @Model.BookName </h2> <span> <i class="fa fa-calendar"></i>  انتشار : @Model.PublishYear.ToShamsi()</span></header>
-        <article>
-            <p>
-                @Model.ShortDescription
-            </p>
-            <div>
-                <img src="~/contents/BookImages/@Model.ImageName" alt="@Model.BookName" class="thumbnail" />
-            </div>
-            <p>
-                @Model.ShortDescription
-            </p>
+        <article class="col-md-12 col-sm-12 col-xs-12">
+            <ul>
+                <li>
+                    <img class="border-radius col-md-5 col-sm-5 col-xs-5 pull-left rounded rounded-sm" src="~/contents/BookImages/@Model.ImageName" alt="@Model.BookName" />
+                    <br />
+                    <p>
+                        توضیح مختصر: @Model.ShortDescription
+                    </p>
+                    <p>
+                        نویسنده: @Model.Author
+                    </p>
+                    <p>
+                        انتشارات: @Model.PublisherName
+                    </p>
+                    <p>
+                        قیمت اجاره(ریال): @Model.Price
+                    </p>
+                    <p>
+                        دسته بندی: @ViewData["GroupName"].ToString()
+                    </p>
+                </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+    <li class="alert alert-info col-md-6 mt-3">
+        <form asp-controller="Rent" asp-action="RentBook" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="userId" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)" />
+            <input type="hidden" name="bookId" value="@Model.BookID" />
+            <p>چه تعداد روز می خواهید اجاره کنید؟</p>
+            <input class="form-control" type="number" name="countDay" value="" required />
+            <br />
+            <input class="btn btn-primary btn-block px-5" type="submit" value="اجاره کتاب" />
+        </form>
+    </li>
+}
+else
+{
+    <li class="alert alert-warning col-md-5 mt-3">
+        <p>
+            برای اجاره ابتدا باید وارد سایت شوید !
+        </p>
+        <p>
+            <a class="btn btn-warning btn-block" href="/login">ورود به سایت</a>
+        </p>
+    </li>
+}
+            </ul>
         </article>
     </section>
 
 
     @*Show Tags*@
     @*<div class="keywords border-radius">
-        @{
-            foreach (var item in Model.tags.Split('-'))
-            {
+            @{
+                foreach (var item in Model.tags.Split('-'))
+                {
 
-                <a href="/Search?parameter=@item">@item</a>
+                    <a href="/Search?parameter=@item">@item</a>
 
+                }
             }
-        }
-    </div>*@
+        </div>*@
 
 
 

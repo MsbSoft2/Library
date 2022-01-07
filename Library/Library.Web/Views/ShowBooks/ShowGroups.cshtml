@@ -4,17 +4,16 @@
     ViewData["Title"] = "آخرین کتاب ها" + ViewData["GroupTitle"].ToString();
 }
 
-<div class="col-md-8 col-sm-12 col-xs-12 pull-left">
+<div class="col-md-12 col-sm-12 col-xs-12 pull-left">
 
     <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">خانه </a></li>
         <li class="breadcrumb-item"><a href="#">کتاب </a></li>
-        <li class="breadcrumb-item active"> کتاب @ViewData["GroupTitle"].ToString() </li>
+        <li class="breadcrumb-item active">کتاب @ViewData["GroupTitle"].ToString()</li>
     </ul>
 
-    <!-- last news -->
     <section class="last-news-section border-radius">
-        <header><i class="icons icon-doc-2"></i>  <h3> آخرین کتاب ها @ViewData["GroupTitle"].ToString()</h3> </header>
+        <header><i class="icons icon-doc-2"></i>  <h3> آخرین کتاب های @ViewData["GroupTitle"].ToString()</h3> </header>
         <ul>
             @{
                 foreach (var item in Model)
@@ -32,7 +31,6 @@
             }
         </ul>
     </section>
-    <!-- End last news -->
 
     <ul class="pagination">
         <li><a href="#">1</a></li>

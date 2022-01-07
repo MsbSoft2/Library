@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Library.Domain.Models
@@ -18,5 +19,7 @@ namespace Library.Domain.Models
 
         [Display(Name = "نقش"), Required(ErrorMessage = "لطفا {0} را وارد کنید"), MaxLength(50)]
         public string Role { get; set; }
+
+        public List<Rent> Rents { get; set; }
     }
 }

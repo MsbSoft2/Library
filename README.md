@@ -33,13 +33,16 @@
 - ساخت منو پنل ادمین
 - ساخت مدل کاربران
 - ساخت بخش مدیریت کاربران ( افزودن - ویرایش - مشاهده - حذف )
- - logout ( input - submit
-- cashe - cookie 
-- احراز حویت ( میدل ویر
+- ساخت login
+- ساخت logout
+- ساخت Authentication
+- ساخت Coockies
+- Middelware
+- بخش اجاره کتاب ( افزودن - حذف - نمایش - معلوم باشه کدوم کاربر کتاب اجاره کرده
+
 
 امینی :
-- مدیریت کتاب ( سرچ - no front- add - delelet - update - show
+- مدیریت کتاب ( سرچ - add - delelet - update - show
 - login ( html )
-- بخش اجاره ( افزودن - حذف - سرچ - no front - نمایش - معلوم باشه کدوم کاربر کتاب اجاره کرده
 - قالب اصلی نمایشی ( html آماده فونت
-- about - contact us - privacy (  html1 )
+- about - contact us - privacy (  html )
