@@ -1,10 +1,10 @@
 ﻿@model Library.Domain.Models.User
-
+@using Library.Domain.Convertor
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>مشاهده</h1>
 
 <div>
     <hr />
@@ -38,7 +38,7 @@
             @Html.DisplayNameFor(model => model.RegisterDate)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.RegisterDate)
+            @Model.RegisterDate.ToShamsi()
         </dd>
     </dl>
 </div>
