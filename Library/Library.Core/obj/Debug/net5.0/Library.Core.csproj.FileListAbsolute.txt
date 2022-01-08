@@ -73,3 +73,17 @@ D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Lib\Library\Lib
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Lib\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.dll
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Lib\Library\Library\Library.Core\obj\Debug\net5.0\ref\Library.Core.dll
 D:\Larn\University Eduction\001\مهندسی نرم افزار 2\Lib\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.pdb
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.deps.json
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.dll
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\bin\Debug\net5.0\ref\Library.Core.dll
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\bin\Debug\net5.0\Library.Core.pdb
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\bin\Debug\net5.0\Library.Domain.dll
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\bin\Debug\net5.0\Library.Domain.pdb
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.AssemblyReference.cache
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.AssemblyInfoInputs.cache
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.AssemblyInfo.cs
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.csproj.CoreCompileInputs.cache
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.dll
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\obj\Debug\net5.0\ref\Library.Core.dll
+C:\Users\Mehrsa\Desktop\Library\Library\Library.Core\obj\Debug\net5.0\Library.Core.pdb
