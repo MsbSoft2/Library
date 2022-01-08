@@ -1,5 +1,6 @@
 ﻿using Library.Core.DTOs;
 using Library.Core.Repositories;
+using Library.Domain.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -73,6 +74,19 @@ namespace Library.Web.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return Redirect("/");
+        }
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(User user)
+        {
+            user.Role = "user";
+            await _userRepository.Create(user);
+            return RedirectToAction(nameof(Login));
         }
     }
 }
